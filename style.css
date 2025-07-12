@@ -1,0 +1,13 @@
+table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+td:first-child {  /* First column */
+    width: 30%;
+}
+
+td:last-child {  /* Second column */
+    width: 70%;
+}
