@@ -1,13 +1,442 @@
-table {
+/* ==========================================================================
+   Arno Klein - Personal Website
+   Modern, Responsive CSS Stylesheet
+   ========================================================================== */
+
+/* CSS Reset and Base Styles
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #1f1f1f;
+    background-color: #ffffff;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+a {
+    color: #990000;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+a:hover {
+    color: #cc0000;
+    text-decoration: underline;
+}
+
+/* Typography
+   ========================================================================== */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+    line-height: 1.3;
+    margin-bottom: 1rem;
+}
+
+h1 {
+    font-size: 1.75rem;
+    color: #1f1f1f;
+    margin-top: 2rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+    color: #1f1f1f;
+    margin-top: 1.5rem;
+}
+
+h3 {
+    font-size: 1.25rem;
+    color: #434343;
+    margin-top: 1.25rem;
+}
+
+h4 {
+    font-size: 1.125rem;
+    color: #666666;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+strong {
+    font-weight: 600;
+}
+
+em {
+    font-style: italic;
+}
+
+/* Layout Components
+   ========================================================================== */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.header-banner {
+    text-align: center;
+    margin: 1rem 0;
+}
+
+.header-banner img {
+    margin: 0 auto;
+}
+
+/* Navigation
+   ========================================================================== */
+.main-nav {
+    margin: 1.5rem 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.main-nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0;
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1rem 0;
+}
+
+.main-nav li {
+    flex: 1 1 auto;
+    min-width: 80px;
+    text-align: center;
+}
+
+.main-nav a {
+    display: block;
+    padding: 0.5rem 1rem;
+    color: #990000;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.main-nav a:hover {
+    background-color: #f5f5f5;
+}
+
+.main-nav a.active {
+    color: #000000;
+    font-weight: 600;
+}
+
+/* Content Grid Layout
+   ========================================================================== */
+.content-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+@media (min-width: 768px) {
+    .content-grid {
+        grid-template-columns: 200px 1fr;
+    }
+}
+
+@media (min-width: 1024px) {
+    .content-grid {
+        grid-template-columns: 250px 1fr;
+    }
+}
+
+/* Sidebar (Contact Info)
+   ========================================================================== */
+.sidebar {
+    text-align: center;
+}
+
+.sidebar h1 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #1f1f1f;
+}
+
+.sidebar .contact-info {
+    font-size: 0.875rem;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+}
+
+.sidebar .contact-info p {
+    margin-bottom: 0.25rem;
+}
+
+.sidebar .links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.sidebar .links a {
+    font-size: 0.875rem;
+    color: #cc0000;
+}
+
+/* Main Content
+   ========================================================================== */
+.main-content {
+    font-size: 1rem;
+}
+
+.main-content p {
+    margin-bottom: 1rem;
+}
+
+/* Project/Content Cards
+   ========================================================================== */
+.content-section {
+    margin-bottom: 3rem;
+}
+
+.content-section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #666666;
+}
+
+.project-item {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+@media (min-width: 640px) {
+    .project-item {
+        grid-template-columns: 180px 1fr;
+    }
+}
+
+.project-image {
+    text-align: center;
+}
+
+.project-image img {
+    margin: 0 auto;
+}
+
+.project-content h3 {
+    font-size: 1rem;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+
+.project-content p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+.project-content ul {
+    margin: 0.5rem 0 0.5rem 1.5rem;
+    padding: 0;
+}
+
+.project-content li {
+    font-size: 0.875rem;
+    line-height: 1.6;
+    margin-bottom: 0.25rem;
+}
+
+.project-image p {
+    font-size: 0.875rem;
+    margin-top: 0.5rem;
+}
+
+/* Publication Styles
+   ========================================================================== */
+.publication-item {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+@media (min-width: 640px) {
+    .publication-item {
+        grid-template-columns: 120px 1fr;
+    }
+}
+
+.publication-image {
+    text-align: center;
+}
+
+.publication-content {
+    font-size: 0.875rem;
+    line-height: 1.5;
+}
+
+.publication-content p {
+    margin-bottom: 0.5rem;
+}
+
+/* Image Gallery/Grid
+   ========================================================================== */
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 1rem;
+    margin: 2rem 0;
+}
+
+.image-grid img {
     width: 100%;
-    border-collapse: collapse;
-    table-layout: fixed;
+    height: auto;
+    border-radius: 4px;
 }
 
-td:first-child {  /* First column */
-    width: 30%;
+/* Two-column image display for mobile screenshots
+   ========================================================================== */
+.mobile-screenshots {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
-td:last-child {  /* Second column */
-    width: 70%;
+.mobile-screenshots img {
+    max-width: 150px;
+    height: auto;
 }
+
+/* Responsive Breakpoints
+   ========================================================================== */
+
+/* Mobile phones - stack everything */
+@media (max-width: 640px) {
+    html {
+        font-size: 14px;
+    }
+    
+    .main-nav ul {
+        flex-direction: column;
+        gap: 0;
+    }
+    
+    .main-nav li {
+        border-bottom: 1px solid #eee;
+    }
+    
+    .main-nav a {
+        padding: 0.75rem;
+    }
+    
+    .content-grid {
+        gap: 1.5rem;
+    }
+    
+    h1 {
+        font-size: 1.5rem;
+    }
+    
+    h2 {
+        font-size: 1.25rem;
+    }
+}
+
+/* Tablets */
+@media (min-width: 641px) and (max-width: 1023px) {
+    html {
+        font-size: 15px;
+    }
+    
+    .container {
+        padding: 0 1.5rem;
+    }
+}
+
+/* Large screens */
+@media (min-width: 1024px) {
+    .container {
+        padding: 0 2rem;
+    }
+}
+
+/* Print Styles
+   ========================================================================== */
+@media print {
+    .main-nav {
+        display: none;
+    }
+    
+    a {
+        color: #000;
+        text-decoration: underline;
+    }
+    
+    .content-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Utility Classes
+   ========================================================================== */
+.text-center {
+    text-align: center;
+}
+
+.mb-small {
+    margin-bottom: 0.5rem;
+}
+
+.mb-medium {
+    margin-bottom: 1rem;
+}
+
+.mb-large {
+    margin-bottom: 2rem;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Accessibility
+   ========================================================================== */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+/* Focus styles for keyboard navigation */
+a:focus,
+button:focus {
+    outline: 2px solid #990000;
+    outline-offset: 2px;
+}
+
