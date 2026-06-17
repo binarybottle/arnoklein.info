@@ -1,0 +1,32 @@
+BODY {
+	color: Black;
+	background-color: White;
+        font-family: Arial, Verdana, Times New Roman, Helvetica, sans-serif;
+	font-size: 100%;
+}
+
+h1 {    font-size: 100%;
+}
+
+div.main {
+        position: relative;
+	left:   0px;
+	top:    0px;
+        font-size:     100%;
+}
+
+div.image {
+	position: relative;
+        top:  0px;
+        left: 0px;
+}
+
+A {
+	color: #CC6600;
+	text-decoration: none;
+}
+
+A:HOVER {
+	color: #CC0000;
+	text-decoration: none;
+}

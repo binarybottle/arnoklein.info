@@ -1,0 +1,25 @@
+<?php
+
+//----------------------------
+// Edit this section
+//----------------------------
+	$host     = "mysql.binarybottle.com"; // mysql host server
+	$db       = "elloradaily";      // database name
+	$username = "daily";      // mysql db - user
+	$password = "dailizes";    // mysql db - password
+
+//----------------------------
+// connecting mysql db
+//----------------------------	
+	$dbh = mysql_connect( $host, $username, $password );
+	
+	if ( !$dbh ){
+	   $err=mysql_error(  );
+	   die( "Database error: $err" );
+	}
+	else {
+		mysql_select_db( $db, $dbh ) or die ( "Database not available!" );
+                mysql_query("SET NAMES 'utf8'"); // unicode support on!
+	}
+	
+?>

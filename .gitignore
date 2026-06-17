@@ -1,4 +1,6 @@
 .DS_Store
+._*
+.dh-diag
 .claude
 .idea
 .vscode

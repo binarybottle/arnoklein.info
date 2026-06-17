@@ -1,0 +1,85 @@
+BODY {
+	color: Black;
+	background-color: White;
+        font-family: Arial, Verdana, Times New Roman, Helvetica, sans-serif;
+	font-size: 100%;
+}
+h1 {    font-size: 100%;
+}
+body2 {
+        background-color: #FFFFF0;
+        font-size: 100%;
+        color: #996633;
+}
+
+div.main {
+        position: relative;
+	left:   40px;
+	top:    56px;
+        font-size:     100%;
+}
+
+div.footer {
+        position: relative;
+	left:   50px;
+	top:    50px;
+	font-size: 80%;
+}
+
+.logogram {
+        font-family:Arial,Times,sans-serif;
+        font-size:30px;
+        color:#CC6600;
+        text-indent:20px;
+        position: relative;
+	left:   12px;
+	top:    10px;
+}
+.banner_link {
+        color:#fbc873;
+        position: relative;
+	left:   30px;
+	top:    20px;
+}
+div.top_photo {
+	position: absolute;
+        top:  40px;
+        left: 380px;
+}
+div.movie {
+	position: relative;
+        top:  10px;
+        left: -2px;
+}
+div.now {
+	position: relative;
+        top: 10px;
+}
+div.merge {
+	position: relative;
+        top: 1px;
+}
+div.caption_merge {
+	position: relative;
+        top: -10px;
+	font-size: 70%;
+}
+.caption {
+	font-size: 70%;
+}
+.caption2 {
+	font-size: 70%;
+	position: relative;
+        top: 0px;
+	font-size: 70%;
+}
+
+A {
+	color: #CC6600;
+	text-decoration: none;
+}
+
+A:HOVER {
+	color: #CC0000;
+	text-decoration: none;
+}
